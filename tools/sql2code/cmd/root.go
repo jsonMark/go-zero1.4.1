@@ -2,9 +2,11 @@ package cmd
 
 import (
 	"fmt"
+	"github.com/logrusorgru/aurora"
 	"github.com/zeromicro/go-zero/tools/sql2code/api"
 	"github.com/zeromicro/go-zero/tools/sql2code/gen"
 	"github.com/zeromicro/go-zero/tools/sql2code/model"
+	"github.com/zeromicro/go-zero/tools/sql2code/version"
 	"os"
 
 	"github.com/logrusorgru/aurora"
@@ -22,7 +24,7 @@ const (
 var rootCmd = &cobra.Command{
 	Use:   "sql2code",
 	Short: "基于goctl的代码生成工具",
-	Long:  `代码生成工具`,
+	Long:  `根据sql生成代码工具`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
@@ -54,5 +56,6 @@ func init() {
 	rootCmd.AddCommand(gen.Cmd)
 	rootCmd.AddCommand(model.Cmd)
 	rootCmd.AddCommand(api.Cmd)
+	rootCmd.AddCommand(version.Cmd)
 	//RootCmd.AddCommand(gen.Cmd)
 }
