@@ -9,7 +9,6 @@ import (
 	"github.com/zeromicro/go-zero/tools/sql2code/version"
 	"os"
 
-	"github.com/logrusorgru/aurora"
 	"github.com/spf13/cobra"
 )
 
